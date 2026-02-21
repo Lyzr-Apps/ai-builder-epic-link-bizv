@@ -537,7 +537,7 @@ function WelcomeScreen({ onSelectPrompt }: { onSelectPrompt: (prompt: string) =>
         <div className="w-16 h-16 rounded-2xl bg-gradient-to-br from-[hsl(265,89%,72%)] to-[hsl(326,100%,68%)] flex items-center justify-center mx-auto mb-6 shadow-xl shadow-purple-500/20">
           <FiSearch className="w-8 h-8 text-white" />
         </div>
-        <h1 className="text-2xl font-bold text-[hsl(60,30%,96%)] mb-2 tracking-tight">Welcome to ResearchBot</h1>
+        <h1 className="text-2xl font-bold text-[hsl(60,30%,96%)] mb-2 tracking-tight">Welcome to PRO.AI</h1>
         <p className="text-[hsl(228,10%,62%)] text-sm mb-8 leading-relaxed">
           Your AI-powered research assistant for web and academic sources.
           Ask a question and get a comprehensive synthesis from across the internet and ArXiv.
@@ -874,7 +874,7 @@ export default function Page() {
                 <div className="w-8 h-8 rounded-lg bg-gradient-to-br from-[hsl(265,89%,72%)] to-[hsl(326,100%,68%)] flex items-center justify-center shadow-lg shadow-purple-500/20">
                   <FiSearch className="w-4 h-4 text-white" />
                 </div>
-                <span className="text-sm font-bold tracking-tight">ResearchBot</span>
+                <span className="text-sm font-bold tracking-tight">PRO.AI</span>
               </div>
               <button
                 className="lg:hidden text-[hsl(228,10%,62%)] hover:text-[hsl(60,30%,96%)] transition-colors"
@@ -934,7 +934,7 @@ export default function Page() {
               <div className="flex items-center gap-2">
                 <HiOutlineDocumentText className="w-4 h-4 text-[hsl(265,89%,72%)]" />
                 <span className="text-sm font-semibold tracking-tight">
-                  {activeSession?.title ?? 'ResearchBot'}
+                  {activeSession?.title ?? 'PRO.AI'}
                 </span>
               </div>
             </div>
