@@ -1,0 +1,96 @@
+{
+  "workflow": {
+    "nodes": [
+      {
+        "id": "input_node",
+        "type": "Input",
+        "label": "Research Query",
+        "nodeCategory": "input"
+      },
+      {
+        "id": "manager_agent",
+        "type": "Agent",
+        "label": "Research Coordinator",
+        "nodeCategory": "agent",
+        "agent_id": "6999679c3f15947a386b5b1e",
+        "agent_name": "Research Coordinator",
+        "is_manager": true,
+        "provider": "OpenAI",
+        "model": "gpt-4.1"
+      },
+      {
+        "id": "web_research_agent",
+        "type": "Agent",
+        "label": "Web Research Agent",
+        "nodeCategory": "agent",
+        "agent_id": "69996776771423cce61cd012",
+        "agent_name": "Web Research Agent",
+        "is_sub_agent": true,
+        "provider": "Perplexity",
+        "model": "sonar-pro"
+      },
+      {
+        "id": "arxiv_research_agent",
+        "type": "Agent",
+        "label": "ArXiv Research Agent",
+        "nodeCategory": "agent",
+        "agent_id": "699967889f3636d6dd80970f",
+        "agent_name": "ArXiv Research Agent",
+        "is_sub_agent": true,
+        "provider": "OpenAI",
+        "model": "gpt-4.1"
+      },
+      {
+        "id": "output_node",
+        "type": "Output",
+        "label": "Research Response",
+        "nodeCategory": "end"
+      }
+    ],
+    "edges": [
+      { "source": "input_node", "target": "manager_agent" },
+      { "source": "manager_agent", "target": "web_research_agent" },
+      { "source": "manager_agent", "target": "arxiv_research_agent" },
+      { "source": "web_research_agent", "target": "output_node" },
+      { "source": "arxiv_research_agent", "target": "output_node" }
+    ]
+  },
+  "agents": {
+    "research_coordinator": {
+      "agent_id": "6999679c3f15947a386b5b1e",
+      "name": "Research Coordinator",
+      "role": "Research Coordination Manager",
+      "provider": "OpenAI",
+      "model": "gpt-4.1",
+      "temperature": 0.3,
+      "top_p": 1,
+      "is_manager": true,
+      "managed_agents": [
+        "69996776771423cce61cd012",
+        "699967889f3636d6dd80970f"
+      ]
+    },
+    "web_research_agent": {
+      "agent_id": "69996776771423cce61cd012",
+      "name": "Web Research Agent",
+      "role": "Web Research Specialist",
+      "provider": "Perplexity",
+      "model": "sonar-pro",
+      "temperature": 0.2,
+      "top_p": 1,
+      "is_sub_agent": true,
+      "tools": []
+    },
+    "arxiv_research_agent": {
+      "agent_id": "699967889f3636d6dd80970f",
+      "name": "ArXiv Research Agent",
+      "role": "Academic Research Specialist",
+      "provider": "OpenAI",
+      "model": "gpt-4.1",
+      "temperature": 0.2,
+      "top_p": 1,
+      "is_sub_agent": true,
+      "tools": ["ARXIV_SEARCH_PAPERS", "ARXIV_GET_PAPER_METADATA"]
+    }
+  }
+}

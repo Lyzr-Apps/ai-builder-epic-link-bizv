@@ -1,0 +1,58 @@
+{
+  "agent_name": "Research Coordinator",
+  "agent_id": "6999679c3f15947a386b5b1e",
+  "description": "Coordinates sub-agents to query web and academic sources simultaneously, aggregates and synthesizes results into a structured, citation-backed research response",
+  "agent_type": "json",
+  "accessor": "result",
+  "auto_generated": true,
+  "response_schema": {
+    "summary": "string",
+    "web_findings": [
+      {
+        "title": "string",
+        "url": "string",
+        "summary": "string",
+        "source_type": "string"
+      }
+    ],
+    "academic_papers": [
+      {
+        "title": "string",
+        "authors": "string",
+        "abstract": "string",
+        "arxiv_id": "string",
+        "arxiv_url": "string",
+        "published_date": "string",
+        "relevance_summary": "string"
+      }
+    ],
+    "key_takeaways": [
+      "string"
+    ]
+  },
+  "example_response": {
+    "summary": "sample string",
+    "web_findings": [
+      {
+        "title": "sample string",
+        "url": "sample string",
+        "summary": "sample string",
+        "source_type": "sample string"
+      }
+    ],
+    "academic_papers": [
+      {
+        "title": "sample string",
+        "authors": "sample string",
+        "abstract": "sample string",
+        "arxiv_id": "sample string",
+        "arxiv_url": "sample string",
+        "published_date": "sample string",
+        "relevance_summary": "sample string"
+      }
+    ],
+    "key_takeaways": [
+      "sample string"
+    ]
+  }
+}

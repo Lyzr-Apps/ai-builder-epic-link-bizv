@@ -1,0 +1,40 @@
+{
+  "agent_name": "ArXiv Research Agent",
+  "agent_id": "699967889f3636d6dd80970f",
+  "description": "Searches arXiv for relevant academic papers, retrieves metadata, abstracts, and citation details for scientific literature discovery",
+  "agent_type": "json",
+  "accessor": "result",
+  "auto_generated": true,
+  "response_schema": {
+    "papers": [
+      {
+        "title": "string",
+        "authors": "string",
+        "abstract": "string",
+        "arxiv_id": "string",
+        "arxiv_url": "string",
+        "published_date": "string",
+        "categories": "string",
+        "relevance_summary": "string"
+      }
+    ],
+    "research_themes": ["string"],
+    "total_papers_found": "number"
+  },
+  "example_response": {
+    "papers": [
+      {
+        "title": "sample string",
+        "authors": "sample string",
+        "abstract": "sample string",
+        "arxiv_id": "sample string",
+        "arxiv_url": "sample string",
+        "published_date": "sample string",
+        "categories": "sample string",
+        "relevance_summary": "sample string"
+      }
+    ],
+    "research_themes": ["sample string"],
+    "total_papers_found": 0
+  }
+}

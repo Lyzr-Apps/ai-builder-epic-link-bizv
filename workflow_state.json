@@ -1,0 +1,19 @@
+{
+  "app_name": "ResearchBot",
+  "pattern": "manager-subagent",
+  "manager_agent_id": "6999679c3f15947a386b5b1e",
+  "agent_ids": {
+    "Research Coordinator": "6999679c3f15947a386b5b1e",
+    "Web Research Agent": "69996776771423cce61cd012",
+    "ArXiv Research Agent": "699967889f3636d6dd80970f"
+  },
+  "sub_agent_ids": [
+    "69996776771423cce61cd012",
+    "699967889f3636d6dd80970f"
+  ],
+  "response_schemas": {
+    "Research Coordinator": "response_schemas/research_coordinator_response.json",
+    "Web Research Agent": "response_schemas/web_research_agent_response.json",
+    "ArXiv Research Agent": "response_schemas/arxiv_research_agent_response.json"
+  }
+}

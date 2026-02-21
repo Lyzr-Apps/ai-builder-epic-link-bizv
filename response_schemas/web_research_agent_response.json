@@ -1,0 +1,32 @@
+{
+  "agent_name": "Web Research Agent",
+  "agent_id": "69996776771423cce61cd012",
+  "description": "Searches the internet for current technical information, documentation, articles, and community discussions relevant to the user's query",
+  "agent_type": "json",
+  "accessor": "result",
+  "auto_generated": true,
+  "response_schema": {
+    "web_findings": [
+      {
+        "title": "string",
+        "url": "string",
+        "summary": "string",
+        "source_type": "string"
+      }
+    ],
+    "key_insights": ["string"],
+    "search_context": "string"
+  },
+  "example_response": {
+    "web_findings": [
+      {
+        "title": "sample string",
+        "url": "sample string",
+        "summary": "sample string",
+        "source_type": "sample string"
+      }
+    ],
+    "key_insights": ["sample string"],
+    "search_context": "sample string"
+  }
+}
